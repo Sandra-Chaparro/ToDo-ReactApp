@@ -3,7 +3,7 @@ import { TodoItem } from "./TodoItem";
 import { TodoList } from "./TodoList";
 import { TodoSearch } from "./TodoSearch";
 import { Footer } from "./Footer";
-import { Icon } from "./Icon.js";
+import { Logo } from "./Logo.js";
 import { CreateTodoButton } from "./CreateTodoButton";
 
 const defaultTodos = [
@@ -28,7 +28,7 @@ const defaultTodos = [
 function App() {
   return (
     <>
-      <Icon />
+      <Logo />
       <div style={{ backgroundColor: "#08313A", borderRadius: "2%" }}>
         <TodoCounter completed={10} total={20} />
         <TodoSearch />

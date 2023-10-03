@@ -25,7 +25,7 @@ code {
     monospace;
 }
 
-.icon {
+.logo {
   position: absolute;
   top: 1%;
   left: 1%;
@@ -66,6 +66,10 @@ code {
   margin-bottom: 15px;
   margin-left: -30%;
   background-color: #f5f5e9;
+}
+
+.todoItem-complete {
+  text-decoration: line-through;
 }
 
 .item {
