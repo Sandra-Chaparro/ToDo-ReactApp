@@ -81,13 +81,30 @@ code {
   margin-left: 20px;
 }
 
+.taskCompleted {
+  color: green;
+}
+
 .deleteTask {
   float: right;
+  cursor: pointer;
+}
+
+.deleteTask:hover {
+  cursor: pointer;
+  color: red;
 }
 
 .addTask {
   float: right;
   margin-right: 34%;
+  cursor: pointer;
+  color: white;
+}
+
+.addTask:hover {
+  cursor: pointer;
+  color: gray;
 }
 
 .footer {
