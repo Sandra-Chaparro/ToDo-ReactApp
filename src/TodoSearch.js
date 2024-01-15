@@ -1,9 +1,6 @@
 import React from "react";
 
-function TodoSearch() {
-  const [searchValue, setSearchValue] = React.useState(""); //Initalize with an empty string
-  console.log("los usuarios buscan " + searchValue);
-
+function TodoSearch({ searchValue, setSearchValue }) {
   return (
     <input
       className="todoSearch"
