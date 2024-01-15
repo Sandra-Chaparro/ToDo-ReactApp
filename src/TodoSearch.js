@@ -1,8 +1,16 @@
+import React from "react";
+
 function TodoSearch() {
+  const [searchValue, setSearchValue] = React.useState(""); //Initalize with an empty string
+  console.log("los usuarios buscan " + searchValue);
+
   return (
     <input
       className="todoSearch"
-      onChange={(event) => console.log(event.target.value)}
+      value={searchValue}
+      onChange={(event) => {
+        setSearchValue(event.target.value);
+      }}
       placeholder="Prepare meals"
     />
   );
