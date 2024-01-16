@@ -10,6 +10,7 @@ function TodoItem(props) {
         className={`item checkIcon ${
           props.completed == true && "taskCompleted"
         } `}
+        onClick={props.onComplete}
         size="2.5em"
       />
 
@@ -21,7 +22,11 @@ function TodoItem(props) {
         {props.text}
       </p>
 
-      <AiFillCloseCircle className="item deleteTask" size="2.5em" />
+      <AiFillCloseCircle
+        className="item deleteTask"
+        size="2.5em"
+        onClick={props.onDelete}
+      />
     </Card>
   );
 }

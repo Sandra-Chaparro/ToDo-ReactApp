@@ -81,6 +81,10 @@ code {
   margin-left: 20px;
 }
 
+.checkIcon:hover {
+  cursor: pointer;
+}
+
 .taskCompleted {
   color: green;
 }
