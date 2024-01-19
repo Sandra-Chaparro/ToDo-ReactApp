@@ -68,13 +68,13 @@ code {
   background-color: #f5f5e9;
 }
 
-.todoItem-complete {
-  text-decoration: line-through;
-}
-
 .item {
   /*background-color: red;*/
   display: inline-block;
+}
+
+.item-complete {
+  text-decoration: line-through;
 }
 
 .task {
@@ -85,7 +85,7 @@ code {
   cursor: pointer;
 }
 
-.taskCompleted {
+.checkIconTaskCompleted {
   color: green;
 }
 

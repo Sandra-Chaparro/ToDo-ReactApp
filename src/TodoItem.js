@@ -1,18 +1,13 @@
 import Card from "react-bootstrap/Card";
 import "./index.css";
-import { AiFillCloseCircle } from "react-icons/ai";
-import { AiFillCheckCircle } from "react-icons/ai";
+
+import { CompleteIcon } from "./CompleteIcon";
+import { DeleteIcon } from "./DeleteIcon";
 
 function TodoItem(props) {
   return (
     <Card body className="todoItem">
-      <AiFillCheckCircle
-        className={`item checkIcon ${
-          props.completed == true && "taskCompleted"
-        } `}
-        onClick={props.onComplete}
-        size="2.5em"
-      />
+      <CompleteIcon completed={props.completed} onComplete={props.onComplete} />
 
       <p
         className={`item task ${
@@ -22,11 +17,7 @@ function TodoItem(props) {
         {props.text}
       </p>
 
-      <AiFillCloseCircle
-        className="item deleteTask"
-        size="2.5em"
-        onClick={props.onDelete}
-      />
+      <DeleteIcon onDelete={props.onDelete} />
     </Card>
   );
 }
