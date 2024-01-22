@@ -1,4 +1,4 @@
-import "./index.css";
+import "./CompleteIcon.css";
 import { AiFillCheckCircle } from "react-icons/ai";
 
 function CompleteIcon(props) {

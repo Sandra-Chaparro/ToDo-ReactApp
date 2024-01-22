@@ -1,4 +1,4 @@
-import "./index.css";
+import "./SWITLogo.css";
 import logo from "./Icon.png";
 
 function Logo() {

@@ -1,5 +1,5 @@
 import Card from "react-bootstrap/Card";
-import "./index.css";
+import "./TodoItem.css";
 
 import { CompleteIcon } from "./CompleteIcon";
 import { DeleteIcon } from "./DeleteIcon";

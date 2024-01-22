@@ -1,0 +1,7 @@
+.checkIcon:hover {
+  cursor: pointer;
+}
+
+.checkIconTaskCompleted {
+  color: green;
+}

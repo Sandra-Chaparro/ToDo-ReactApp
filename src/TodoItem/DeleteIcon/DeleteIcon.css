@@ -1,0 +1,9 @@
+.deleteTask {
+  float: right;
+  cursor: pointer;
+}
+
+.deleteTask:hover {
+  cursor: pointer;
+  color: red;
+}

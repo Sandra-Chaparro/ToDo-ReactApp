@@ -1,0 +1,11 @@
+.addTodo {
+  float: right;
+  margin-right: 34%;
+  cursor: pointer;
+  color: white;
+}
+
+.addTodo:hover {
+  cursor: pointer;
+  color: gray;
+}

@@ -1,4 +1,4 @@
-import "./index.css";
+import "./DeleteIcon.css";
 import { AiFillCloseCircle } from "react-icons/ai";
 
 function DeleteIcon(props) {
