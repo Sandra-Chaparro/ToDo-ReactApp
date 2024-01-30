@@ -24,14 +24,3 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-
-.footer {
-  background-color: #08313a;
-  color: white;
-  text-align: center;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  border-radius: #08313a;
-}
