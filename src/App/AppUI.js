@@ -28,7 +28,12 @@ function AppUI({
         <TodoSearch searchValue={searchValue} setSearchValue={setSearchValue} />
         <CreateTodoButton />
         <TodoList>
-          {loading && <TodosLoading />}
+          {loading && (
+            <>
+              <TodosLoading />
+              <TodosLoading />
+            </>
+          )}
           {error && <TodosError />}
           {!loading && searchedTodos < 1 && <EmptyTodos />}
 
