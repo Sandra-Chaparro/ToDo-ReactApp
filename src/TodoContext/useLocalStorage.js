@@ -1,6 +1,6 @@
 import React from "react";
 
-//custom hook for LocaStorage
+//------custom hook for LocaStorage
 function useLocalStorage(itemName, initialValue) {
   const [item, setItems] = React.useState(initialValue);
   const [loading, setLoading] = React.useState(true);
@@ -37,5 +37,29 @@ function useLocalStorage(itemName, initialValue) {
   return { item, saveItem, loading, error }; //when there is more than 2 to return,
   //react Hooks reccomend to use object instead
 }
+// localStorage.removeItem("TODOS_V1");
+// const defaultTodos = [
+//   {
+//     text: "Morning walk",
+//     completed: true,
+//   },
+//   {
+//     text: "MeeWOting",
+//     completed: false,
+//   },
+//   {
+//     text: "Read",
+//     completed: false,
+//   },
+//   {
+//     text: "Clean house",
+//     completed: true,
+//   },
+//   {
+//     text: "workflow ca",
+//     completed: true,
+//   },
+// ];
 
+// localStorage.setItem("TODOS_V1", JSON.stringify(defaultTodos));
 export { useLocalStorage };

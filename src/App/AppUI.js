@@ -8,28 +8,25 @@ import { EmptyTodos } from "../EmptyTodos";
 import { Footer } from "../Footer";
 import { Logo } from "../SWITLogo";
 import { CreateTodoButton } from "../CreateTodoButton";
+import { TodoContext } from "../TodoContext";
+import React from "react";
 
-function AppUI({
-  loading,
-  error,
-  completedTodos,
-  totalTodos,
-  searchValue,
-  setSearchValue,
-  searchedTodos,
-  completeTodo,
-  deleteTodo,
-}) {
+function AppUI() {
+  const { loading, error, searchedTodos, completeTodo, deleteTodo } =
+    React.useContext(TodoContext);
+
   return (
     <>
       <Logo />
       <div style={{ backgroundColor: "#08313A", borderRadius: "2%" }}>
-        <TodoCounter completed={completedTodos} total={totalTodos} />
-        <TodoSearch searchValue={searchValue} setSearchValue={setSearchValue} />
+        <TodoCounter />
+        <TodoSearch />
         <CreateTodoButton />
+
         <TodoList>
           {loading && (
             <>
+              <TodosLoading />
               <TodosLoading />
               <TodosLoading />
             </>
