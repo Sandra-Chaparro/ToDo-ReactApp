@@ -13,6 +13,7 @@ function TodoProvider({ children }) {
   } = useLocalStorage("TODOS_V1", []);
   //useState to track the change on the input from user to searchTodos
   const [searchValue, setSearchValue] = React.useState(""); //Initalize with an empty string
+  const [openModal, setopenModal] = React.useState(true); //Initalize with an empty string
 
   const completedTodos = todos.filter((todo) => todo.completed).length;
   const totalTodos = todos.length; //to show the total number of todos on top of the search input
@@ -53,6 +54,7 @@ function TodoProvider({ children }) {
         searchedTodos,
         completeTodo,
         deleteTodo,
+        openModal,
       }}
     >
       {children}

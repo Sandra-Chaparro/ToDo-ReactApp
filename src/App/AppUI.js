@@ -9,11 +9,19 @@ import { Footer } from "../Footer";
 import { Logo } from "../SWITLogo";
 import { CreateTodoButton } from "../CreateTodoButton";
 import { TodoContext } from "../TodoContext";
+import { Modal } from "..//Modal";
 import React from "react";
 
 function AppUI() {
-  const { loading, error, searchedTodos, completeTodo, deleteTodo } =
-    React.useContext(TodoContext);
+  const {
+    loading,
+    error,
+    searchedTodos,
+    completeTodo,
+    deleteTodo,
+    openModal,
+    setopenModal,
+  } = React.useContext(TodoContext);
 
   return (
     <>
@@ -22,7 +30,6 @@ function AppUI() {
         <TodoCounter />
         <TodoSearch />
         <CreateTodoButton />
-
         <TodoList>
           {loading && (
             <>
@@ -46,6 +53,7 @@ function AppUI() {
         </TodoList>
       </div>
       <Footer />
+      {openModal && <Modal>La funcionalidad de agregar TODO</Modal>}
     </>
   );
 }
