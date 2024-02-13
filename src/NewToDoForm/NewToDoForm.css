@@ -1,0 +1,50 @@
+.inputForm {
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: 30%;
+  background-color: white;
+  color: black;
+  font-weight: 700;
+}
+
+.input {
+  margin-top: 10px;
+  border-color: gray;
+  box-shadow: none;
+  background-color: white;
+  border-radius: 3px;
+  height: 13%;
+}
+
+.button {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 15px;
+  border-radius: 7px;
+  cursor: pointer;
+  font-size: 15px;
+  line-height: 25px;
+  border-width: 3px;
+  padding: 6px 21px 6px 21px;
+}
+
+.buttonCancel {
+  border-color: red;
+  color: red;
+}
+
+.buttonAdd {
+  border-color: green;
+  color: green;
+}
+
+.text {
+  margin-top: 10px;
+}

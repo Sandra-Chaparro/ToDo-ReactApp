@@ -13,7 +13,7 @@ function TodoProvider({ children }) {
   } = useLocalStorage("TODOS_V1", []);
   //useState to track the change on the input from user to searchTodos
   const [searchValue, setSearchValue] = React.useState(""); //Initalize with an empty string
-  const [openModal, setopenModal] = React.useState(true); //Initalize with an empty string
+  const [openModal, setOpenModal] = React.useState(false); //Initalize with an empty string
 
   const completedTodos = todos.filter((todo) => todo.completed).length;
   const totalTodos = todos.length; //to show the total number of todos on top of the search input
@@ -24,6 +24,13 @@ function TodoProvider({ children }) {
     const searchText = searchValue.toLowerCase();
     return todoText.includes(searchText);
   });
+
+  const addTodo = (text) => {
+    saveTodos();
+    const newItem = [...todos]; //unpack values from the todo array (destructuring assignment syntax)
+    newItem.push({ text, completed: false });
+    saveTodos(newItem);
+  };
 
   const completeTodo = (text) => {
     //function to mark todo completed when user clicks the checkmark
@@ -55,6 +62,8 @@ function TodoProvider({ children }) {
         completeTodo,
         deleteTodo,
         openModal,
+        setOpenModal,
+        addTodo,
       }}
     >
       {children}

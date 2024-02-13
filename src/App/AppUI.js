@@ -9,8 +9,9 @@ import { Footer } from "../Footer";
 import { Logo } from "../SWITLogo";
 import { CreateTodoButton } from "../CreateTodoButton";
 import { TodoContext } from "../TodoContext";
-import { Modal } from "..//Modal";
+import { Modal } from "../Modal";
 import React from "react";
+import { NewToDoForm } from "../NewToDoForm";
 
 function AppUI() {
   const {
@@ -20,7 +21,7 @@ function AppUI() {
     completeTodo,
     deleteTodo,
     openModal,
-    setopenModal,
+    setOpenModal,
   } = React.useContext(TodoContext);
 
   return (
@@ -29,7 +30,7 @@ function AppUI() {
       <div style={{ backgroundColor: "#08313A", borderRadius: "2%" }}>
         <TodoCounter />
         <TodoSearch />
-        <CreateTodoButton />
+        <CreateTodoButton setOpenModal={setOpenModal} />
         <TodoList>
           {loading && (
             <>
@@ -39,7 +40,7 @@ function AppUI() {
             </>
           )}
           {error && <TodosError />}
-          {!loading && searchedTodos < 1 && <EmptyTodos />}
+          {!loading && searchedTodos.length === 0 && <EmptyTodos />}
 
           {searchedTodos.map((todo) => (
             <TodoItem
@@ -53,7 +54,11 @@ function AppUI() {
         </TodoList>
       </div>
       <Footer />
-      {openModal && <Modal>La funcionalidad de agregar TODO</Modal>}
+      {openModal && (
+        <Modal>
+          <NewToDoForm></NewToDoForm>
+        </Modal>
+      )}
     </>
   );
 }
