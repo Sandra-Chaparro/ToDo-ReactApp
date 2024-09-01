@@ -1,12 +1,12 @@
 import { MdOutlineAddCircle } from "react-icons/md";
 import "./CreateTodoButton.css";
 
-function CreateTodoButton({ setOpenModal }) {
+function CreateTodoButton({ setOpenAddModal }) {
   return (
     <MdOutlineAddCircle
       className="addTodo"
       onClick={() => {
-        setOpenModal((state) => !state);
+        setOpenAddModal((state) => !state);
       }}
       size="2.8em"
     />

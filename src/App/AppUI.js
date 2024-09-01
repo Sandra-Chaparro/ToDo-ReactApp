@@ -12,6 +12,7 @@ import { TodoContext } from "../TodoContext";
 import { Modal } from "../Modal";
 import React from "react";
 import { NewToDoForm } from "../NewToDoForm";
+import { EditForm } from "../EditToDoForm";
 
 function AppUI() {
   const {
@@ -19,9 +20,12 @@ function AppUI() {
     error,
     searchedTodos,
     completeTodo,
+    editTodo,
     deleteTodo,
-    openModal,
-    setOpenModal,
+    openAddModal,
+    setOpenAddModal,
+    openEditModal,
+    setOpenEditModal,
   } = React.useContext(TodoContext);
 
   return (
@@ -30,7 +34,7 @@ function AppUI() {
       <div style={{ backgroundColor: "#08313A", borderRadius: "2%" }}>
         <TodoCounter />
         <TodoSearch />
-        <CreateTodoButton setOpenModal={setOpenModal} />
+        <CreateTodoButton setOpenAddModal={setOpenAddModal} />
         <TodoList>
           {loading && (
             <>
@@ -49,14 +53,18 @@ function AppUI() {
               completed={todo.completed}
               onComplete={() => completeTodo(todo.text)}
               onDelete={() => deleteTodo(todo.text)}
+              onEdit={() => editTodo(todo.text)}
+              setOpenAddModal={setOpenAddModal}
+              setOpenEditModal={setOpenEditModal}
             />
           ))}
         </TodoList>
       </div>
       <Footer />
-      {openModal && (
+      {(openAddModal || openEditModal) && (
         <Modal>
-          <NewToDoForm></NewToDoForm>
+          {openAddModal && <NewToDoForm></NewToDoForm>}
+          {openEditModal && <EditForm></EditForm>}
         </Modal>
       )}
     </>

@@ -12,7 +12,7 @@ function TodoSearch() {
       onChange={(event) => {
         setSearchValue(event.target.value);
       }}
-      placeholder="Prepare meals"
+      placeholder="Search here your to-do or task"
     />
   );
 }

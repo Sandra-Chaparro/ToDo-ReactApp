@@ -3,6 +3,7 @@ import "./TodoItem.css";
 
 import { CompleteIcon } from "./CompleteIcon";
 import { DeleteIcon } from "./DeleteIcon";
+import { EditButton } from "./EditIcon";
 
 function TodoItem(props) {
   return (
@@ -16,7 +17,10 @@ function TodoItem(props) {
       >
         {props.text}
       </p>
-
+      <EditButton
+        setOpenEditModal={props.setOpenEditModal}
+        onEdit={props.onEdit}
+      />
       <DeleteIcon onDelete={props.onDelete} />
     </Card>
   );
