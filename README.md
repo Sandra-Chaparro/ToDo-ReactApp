@@ -10,7 +10,7 @@ Delete Tasks: Remove tasks from the list.
 
 Mark as Completed: Toggle tasks between completed and pending states.
 
-Usage
+**Usage**
 
 Add a Task: Use the input form to add a new task.
 
@@ -20,7 +20,7 @@ Delete a Task: Click the "Delete" button to remove a task.
 
 Mark as Completed: Click the checkbox to mark a task as completed.
 
-Technologies Used
+**Technologies Used**
 
 React (Frontend)
 
@@ -30,7 +30,7 @@ JavaScript (Logic)
 
 ChatGPT (Used for debugging and troubleshooting)
 
-Concepts learned:
+**Concepts learned:**
 
 -useState()
 
