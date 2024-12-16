@@ -1,3 +1,48 @@
+This is a simple TODO application built with React. It allows users to create, delete, edit, and mark tasks as completed.
+
+**Features**
+
+Create Tasks: Add new tasks with a title and description.
+
+Edit Tasks: Update task details.
+
+Delete Tasks: Remove tasks from the list.
+
+Mark as Completed: Toggle tasks between completed and pending states.
+
+Usage
+
+Add a Task: Use the input form to add a new task.
+
+Edit a Task: Click the "Edit" button to modify task details.
+
+Delete a Task: Click the "Delete" button to remove a task.
+
+Mark as Completed: Click the checkbox to mark a task as completed.
+
+Technologies Used
+
+React (Frontend)
+
+CSS (Styling)
+
+JavaScript (Logic)
+
+ChatGPT (Used for debugging and troubleshooting)
+
+Concepts learned:
+
+-useState()
+
+-useEffect()
+
+-CustomHooks
+
+-useContext()
+
+URL: https://to-do-react-app-iota.vercel.app/
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
